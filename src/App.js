@@ -7,7 +7,11 @@ import { useState } from "react";
 
 function App() {
   const [image, setImage] = useState(Flower1);
-
+  fetch("https://random-d.uk/api/v2/random", { mode: "no-cors" }).then(
+    (response) => {
+      console.log(response.body);
+    }
+  );
   return (
     <div className="App">
       <div className="thumbnailwrapper">
